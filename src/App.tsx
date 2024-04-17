@@ -44,6 +44,7 @@ function App() {
 					>
 						Management
 						<div>
+							With fluent ui
 							<PrimaryButton>Fluent UI</PrimaryButton>
 							<FormTest />
 						</div>
