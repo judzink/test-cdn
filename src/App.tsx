@@ -1,4 +1,5 @@
 import FormTest from "./components/Form"
+import { PrimaryButton } from "@fluentui/react"
 
 function App() {
 	return (
@@ -43,6 +44,7 @@ function App() {
 					>
 						Management
 						<div>
+							<PrimaryButton>Fluent UI</PrimaryButton>
 							<FormTest />
 						</div>
 					</div>
