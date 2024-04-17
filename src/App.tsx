@@ -1,3 +1,5 @@
+import FormTest from "./components/Form"
+
 function App() {
 	return (
 		<div style={{ display: "flex", gap: "20px", height: "100%" }}>
@@ -40,6 +42,9 @@ function App() {
 						}}
 					>
 						Management
+						<div>
+							<FormTest />
+						</div>
 					</div>
 					{/* jobs */}
 					<div
