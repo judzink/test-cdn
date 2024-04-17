@@ -27,5 +27,5 @@ export default defineConfig({
 			},
 		},
 	},
-	base: "https://cdn.jsdelivr.net/gh/aleksandar-stojkoski/rps-ai-widget-public/dist/assets",
+	base: "https://cdn.jsdelivr.net/gh/judzink/test-cdn/dist/assets",
 })
