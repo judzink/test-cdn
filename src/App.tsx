@@ -30,16 +30,17 @@ function App() {
 	const testDataElement = document.getElementById("testData")
 
 	let data = {}
+	let dataTest = {}
 
 	setTimeout(() => {
 		if (testDataElement && testDataElement.textContent) {
 			try {
-				data = JSON.parse(testDataElement.textContent)
+				dataTest = JSON.parse(testDataElement.textContent)
 			} catch (error) {
 				console.error("Error parsing initial data:", error)
 			}
 		}
-		console.log("init", testDataElement)
+		console.log("init", dataTest)
 	}, 1000)
 
 	if (initialDataElement && initialDataElement.textContent) {
@@ -51,6 +52,8 @@ function App() {
 	}
 
 	console.log("DATA JSON", data)
+	console.log("init data", dataTest)
+	console.log
 
 	return (
 		<Layout>
