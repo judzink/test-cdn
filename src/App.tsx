@@ -1,69 +1,45 @@
-import FormTest from "./components/Form"
-import { PrimaryButton } from "@fluentui/react"
+import Navbar from "./sections/Navbar"
+import Content from "./sections/Content"
+import Jobs from "./sections/Jobs"
+import Session from "./sections/Session"
 
-function App() {
+import styled from "styled-components"
+
+const Layout = styled.div`
+	display: flex;
+	gap: 20px;
+	height: 100%;
+`
+
+const MainWrapper = styled.div`
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	gap: 20px;
+`
+
+const ContentWrapper = styled.div`
+	display: flex;
+	gap: 20px;
+	height: 100%;
+`
+
+// TODO: add props when some of the components are done
+function App(props: any) {
+	const { name } = props
+	console.log("PROPS - name", name)
 	return (
-		<div style={{ display: "flex", gap: "20px", height: "100%" }}>
-			{/* Section 1 */}
-			<div
-				style={{
-					background: "white",
-					width: "320px",
-					borderRadius: "8px",
-					padding: "12px",
-				}}
-			>
-				Active Session
-			</div>
+		<Layout>
+			<Session />
 
-			<div
-				style={{
-					display: "flex",
-					flexDirection: "column",
-					width: "100%",
-					gap: "20px",
-				}}
-			>
-				{/* Navbar */}
-				<div
-					style={{ background: "white", borderRadius: "8px", padding: "12px" }}
-				>
-					Header
-				</div>
-				{/* content wrapper  */}
-				<div style={{ display: "flex", gap: "20px", height: "100%" }}>
-					{/* content */}
-					<div
-						style={{
-							width: "100%",
-							background: "white",
-							borderRadius: "8px",
-							padding: "12px",
-							height: "100%",
-						}}
-					>
-						Management
-						<div>
-							With fluent ui
-							<PrimaryButton>Fluent UI</PrimaryButton>
-							<FormTest />
-						</div>
-					</div>
-					{/* jobs */}
-					<div
-						style={{
-							width: "320px",
-							background: "white",
-							borderRadius: "8px",
-							padding: "12px",
-							height: "100%",
-						}}
-					>
-						Schedules Jobs
-					</div>
-				</div>
-			</div>
-		</div>
+			<MainWrapper>
+				<Navbar />
+				<ContentWrapper>
+					<Content />
+					<Jobs />
+				</ContentWrapper>
+			</MainWrapper>
+		</Layout>
 	)
 }
 
