@@ -135,7 +135,7 @@ function e(e,t){for(var n=0;n<t.length;n++){const r=t[n];if(typeof r!=="string"&
 	display: flex;
 	gap: 20px;
 	height: 100%;
-`;function rN(e){const{name:t}=e;console.log("props -",e);console.log("PROPS - name",t);const n=document.getElementById("initial-data");let r={};if(n&&n.textContent)try{r=JSON.parse(n.textContent)}catch(o){console.error("Error parsing initial data:",o)}console.log("DATA JSON",r);return Z.jsxs(eN,{children:[Z.jsxs("div",{children:["Name: ",t?t:"no name"]}),Z.jsx(JD,{}),Z.jsxs(tN,{children:[Z.jsx(Fw,{}),Z.jsxs(nN,{children:[Z.jsx(QD,{}),Z.jsx(XD,{})]})]})]})}const oN="";
+`;function rN(){const e=document.getElementById("initial-data");let t={};console.log("init",e);if(e&&e.textContent)try{t=JSON.parse(e.textContent)}catch(n){console.error("Error parsing initial data:",n)}console.log("DATA JSON",t);return Z.jsxs(eN,{children:[Z.jsxs("div",{children:["Name: ",t?"data test":"no name"]}),Z.jsx(JD,{}),Z.jsxs(tN,{children:[Z.jsx(Fw,{}),Z.jsxs(nN,{children:[Z.jsx(QD,{}),Z.jsx(XD,{})]})]})]})}const oN="";
 /**
  * @remix-run/router v1.14.1
  *

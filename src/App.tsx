@@ -25,14 +25,12 @@ const ContentWrapper = styled.div`
 `
 
 // TODO: add props when some of the components are done
-function App(props: any) {
-	const { name } = props
-	console.log("props -", props)
-	console.log("PROPS - name", name)
-
+function App() {
 	const initialDataElement = document.getElementById("initial-data")
 
 	let data = {}
+
+	console.log("init", initialDataElement)
 
 	if (initialDataElement && initialDataElement.textContent) {
 		try {
@@ -44,11 +42,9 @@ function App(props: any) {
 
 	console.log("DATA JSON", data)
 
-	// Now 'data' contains the parsed JSON object or an empty object if parsing failed or the element doesn't exist
-
 	return (
 		<Layout>
-			<div>Name: {name ? name : "no name"}</div>
+			<div>Name: {data ? "data test" : "no name"}</div>
 			<Session />
 
 			<MainWrapper>
