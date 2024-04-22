@@ -29,6 +29,23 @@ function App(props: any) {
 	const { name } = props
 	console.log("props -", props)
 	console.log("PROPS - name", name)
+
+	const initialDataElement = document.getElementById("initial-data")
+
+	let data = {}
+
+	if (initialDataElement && initialDataElement.textContent) {
+		try {
+			data = JSON.parse(initialDataElement.textContent)
+		} catch (error) {
+			console.error("Error parsing initial data:", error)
+		}
+	}
+
+	console.log("DATA JSON", data)
+
+	// Now 'data' contains the parsed JSON object or an empty object if parsing failed or the element doesn't exist
+
 	return (
 		<Layout>
 			<div>Name: {name ? name : "no name"}</div>
