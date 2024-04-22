@@ -135,7 +135,7 @@ function e(e,t){for(var n=0;n<t.length;n++){const r=t[n];if(typeof r!=="string"&
 	display: flex;
 	gap: 20px;
 	height: 100%;
-`;function rN(){const e=document.getElementById("initial-data");let t={};console.log("init",e);if(e&&e.textContent)try{t=JSON.parse(e.textContent)}catch(n){console.error("Error parsing initial data:",n)}console.log("DATA JSON",t);return Z.jsxs(eN,{children:[Z.jsxs("div",{children:["Name: ",t?"data test":"no name"]}),Z.jsx(JD,{}),Z.jsxs(tN,{children:[Z.jsx(Fw,{}),Z.jsxs(nN,{children:[Z.jsx(QD,{}),Z.jsx(XD,{})]})]})]})}const oN="";
+`;function rN(){const e=document.getElementById("initial-data");const t=document.getElementById("testData");let n={};setTimeout((()=>{if(t&&t.textContent)try{n=JSON.parse(t.textContent)}catch(e){console.error("Error parsing initial data:",e)}console.log("init",t)}),1e3);if(e&&e.textContent)try{n=JSON.parse(e.textContent)}catch(r){console.error("Error parsing initial data:",r)}console.log("DATA JSON",n);return Z.jsxs(eN,{children:[Z.jsxs("div",{children:["Name: ",n?"data test":"no name"]}),Z.jsx(JD,{}),Z.jsxs(tN,{children:[Z.jsx(Fw,{}),Z.jsxs(nN,{children:[Z.jsx(QD,{}),Z.jsx(XD,{})]})]})]})}const oN="";
 /**
  * @remix-run/router v1.14.1
  *

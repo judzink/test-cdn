@@ -27,10 +27,20 @@ const ContentWrapper = styled.div`
 // TODO: add props when some of the components are done
 function App() {
 	const initialDataElement = document.getElementById("initial-data")
+	const testDataElement = document.getElementById("testData")
 
 	let data = {}
 
-	console.log("init", initialDataElement)
+	setTimeout(() => {
+		if (testDataElement && testDataElement.textContent) {
+			try {
+				data = JSON.parse(testDataElement.textContent)
+			} catch (error) {
+				console.error("Error parsing initial data:", error)
+			}
+		}
+		console.log("init", testDataElement)
+	}, 1000)
 
 	if (initialDataElement && initialDataElement.textContent) {
 		try {
