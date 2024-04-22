@@ -30,6 +30,7 @@ function App(props: any) {
 	console.log("PROPS - name", name)
 	return (
 		<Layout>
+			<div>Name: {name ? name : "no name"}</div>
 			<Session />
 
 			<MainWrapper>
