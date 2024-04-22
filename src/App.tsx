@@ -27,6 +27,7 @@ const ContentWrapper = styled.div`
 // TODO: add props when some of the components are done
 function App(props: any) {
 	const { name } = props
+	console.log("props -", props)
 	console.log("PROPS - name", name)
 	return (
 		<Layout>
