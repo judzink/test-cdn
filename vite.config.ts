@@ -27,5 +27,4 @@ export default defineConfig({
 			},
 		},
 	},
-	base: "https://cdn.jsdelivr.net/gh/judzink/test-cdn/dist/assets",
 })

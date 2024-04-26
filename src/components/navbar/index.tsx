@@ -1,4 +1,10 @@
-import { makeStyles, Tab, TabList } from "@fluentui/react-components"
+import {
+	makeStyles,
+	SelectTabData,
+	SelectTabEvent,
+	Tab,
+	TabList,
+} from "@fluentui/react-components"
 import {
 	CalendarMonthRegular,
 	CalendarMonthFilled,
@@ -17,12 +23,25 @@ const useStyles = makeStyles({
 	},
 })
 
-export const NavbarComponent = () => {
+interface Props {
+	setSelectedValue: (name: unknown) => void
+}
+
+export const NavbarComponent = ({ setSelectedValue }: Props) => {
 	const styles = useStyles()
+
+	const onTabSelect = (event: SelectTabEvent, data: SelectTabData) => {
+		console.log(event)
+		setSelectedValue(data.value)
+	}
 
 	return (
 		<div className={styles.root}>
-			<TabList defaultSelectedValue="tab2" style={{ gap: "12px" }}>
+			<TabList
+				defaultSelectedValue="tab1"
+				style={{ gap: "12px" }}
+				onTabSelect={onTabSelect}
+			>
 				<Tab icon={<CalendarMonth />} value="tab1" style={{ gap: "6px" }}>
 					Dashboard
 				</Tab>
